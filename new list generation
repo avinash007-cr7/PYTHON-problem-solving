@@ -1,0 +1,13 @@
+# Take number inputs from the user using bulitin functions
+input_list = list(map(int, input("Enter the list elements separated by space: ").split()))
+
+final_list = []  #empty list to store the result
+length = len(input_list)                                         #finding the length of the inputted list for the looping operation
+
+for i in range(length):
+    if i < length - 1:                                            #assinging the i=len-1 for the desired operation
+        final_list.append(input_list[i] + input_list[i+1])        #storing the desired values in empty list which we have created
+    else:
+        final_list.append(input_list[i] + 0)                      #as per the question the final term is assigned
+
+print("Output list n:", final_list)
