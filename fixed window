@@ -1,0 +1,11 @@
+input_array = list(map(int, input("Enter list elements: ").split()))   #input the array values
+k_value = int(input("Enter the value of k: "))                          #enter the value of k 
+max_sum = 0                                                            #declare the smallest value of zero for comparsion
+for i in range(len(input_array) - k_value + 1):                         #declare the sublist value
+    current_sum = 0
+    for j in range(i, i + k_value):
+        current_sum += input_array[j]
+    if current_sum > max_sum:
+        max_sum = current_sum
+
+print("Maximum sum:", max_sum)
