@@ -1,0 +1,12 @@
+arr = list(map(int, input("Enter list elements: ").split()))
+k = int(input("Enter window size k: "))
+x = int(input("Enter value x: "))
+
+count = 0
+
+for i in range(len(arr) - k + 1):
+    avg = sum(arr[i:i+k]) / k
+    if avg >= x:
+        count += 1
+
+print("Count:", count)
