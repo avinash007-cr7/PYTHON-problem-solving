@@ -1,0 +1,26 @@
+arr = list(map(int,input("enter the numbers in 0s or 1s:").split())) #taking input from the user
+n = len(arr)
+max_len = 0  # used for storing the max size of the subarray
+
+
+for i in range(n):
+    count0 = 0
+    count1 = 0
+
+    # ending index 
+    for j in range(i, n):
+
+        #  count0 increase
+        if arr[j] == 0:
+            count0 += 1
+        else:
+            count1 += 1
+
+        # equal number of 0s and 1s irundha
+        if count0 == count1:
+            length = j - i + 1  # subarray length
+            if length > max_len:
+                max_len = length
+
+# answer print
+print("the maximum subarray length is:",max_len)
